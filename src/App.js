@@ -15,6 +15,7 @@ function App() {
 
   return (
     <div className="App">
+      <div className="App__Overlay" />
       <Rico />
       {new Array(50).fill(0).map((key, index) => {
         const left = getRandomInt(width - 100);
