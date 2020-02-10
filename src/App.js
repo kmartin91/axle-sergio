@@ -1,24 +1,35 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import Rico from "./Component/Rico/Rico";
+import Bottle from "./Component/Bottle/Bottle";
+import useWindowDimensions from "./hooks/useWindowDimensions";
+import "./App.css";
+
+const bottles = [];
+
+function getRandomInt(max) {
+  return Math.floor(Math.random() * Math.floor(max));
+}
 
 function App() {
+  const { height, width } = useWindowDimensions();
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Rico />
+      {new Array(50).fill(0).map((key, index) => {
+        const left = getRandomInt(width - 100);
+        const top = getRandomInt(height - 100);
+        bottles.push({ x: left, y: top });
+
+        return (
+          <Bottle
+            key={`bottle-${index}`}
+            invert={index % 2 === 0}
+            top={top}
+            left={left}
+          />
+        );
+      })}
     </div>
   );
 }

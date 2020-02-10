@@ -1,0 +1,7 @@
+.Rico {
+    opacity: 0.9;
+    position: fixed;
+    right: 0;
+    bottom: -50px;
+    z-index: 2;
+}
