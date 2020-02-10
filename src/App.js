@@ -1,5 +1,5 @@
 import React from "react";
-import Rico from "./Component/Rico/Rico";
+import GifLoader from "./Component/GifLoader/GifLoader";
 import Bottle from "./Component/Bottle/Bottle";
 import useWindowDimensions from "./hooks/useWindowDimensions";
 import "./App.css";
@@ -16,10 +16,10 @@ function App() {
   return (
     <div className="App">
       <div className="App__Overlay" />
-      <Rico />
+      <GifLoader />
       {new Array(50).fill(0).map((key, index) => {
-        const left = getRandomInt(width - 100);
-        const top = getRandomInt(height - 100);
+        const left = getRandomInt(width - 200);
+        const top = getRandomInt(height - 200);
         bottles.push({ x: left, y: top });
 
         return (
