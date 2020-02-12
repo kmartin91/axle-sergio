@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import useInterval from "../../hooks/useInterval";
 import Rico from "../Rico/Rico";
 
-const allKeys = ["rico", "mehdi", "patrick"];
+const allKeys = ["rico", "mehdi", "patrick", "julien", "xavier"];
 
 function getRandomInt(max) {
   return Math.floor(Math.random() * Math.floor(max));
