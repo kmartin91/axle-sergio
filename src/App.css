@@ -4,6 +4,10 @@
   height: 100vh;
 }
 
+.App__Top {
+  position: relative;
+  z-index: 5;
+}
 
 .App__Overlay {
   position: fixed;

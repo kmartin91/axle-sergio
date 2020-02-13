@@ -16,9 +16,11 @@ function App() {
   return (
     <div className="App">
       <div className="App__Overlay" />
-      <div className="App__Wordart App__Rainbow">
-        <div className="App__RainbowText">Joyeux anniversaire AXEL</div>
-      </div>
+      <marquee className="App__Top">
+        <div className="App__Wordart App__Rainbow">
+          <div className="App__RainbowText">Joyeux anniversaire AXEL</div>
+        </div>
+      </marquee>
       <GifLoader />
       {new Array(50).fill(0).map((key, index) => {
         const left = getRandomInt(width);
